@@ -20,7 +20,7 @@ const SearchUI = () => {
       return { ...cache, [searchText]: data[1] };
     });
     setSerachResults(data[1]);
-  }, [searchText]);
+  }, [searchText, cache]);
 
   useEffect(() => {
     const s = setTimeout(() => {
