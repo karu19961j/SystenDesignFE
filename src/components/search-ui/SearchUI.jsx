@@ -11,6 +11,7 @@ const SearchUI = () => {
       setSerachResults(cache[searchText]);
       return;
     }
+    // Enable cores extension to make this API work
     const resp = await fetch(
       `https://www.google.com/complete/search?client=firefox&q=${searchText}`
     );
