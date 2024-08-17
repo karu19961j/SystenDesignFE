@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import ChatMessage from "./ChatMessage";
 
+const CHAT_MESSAGES_LIMIT = 100;
+
 const ChatWindow = () => {
   const [messages, setMessages] = useState([]);
 
@@ -21,7 +23,8 @@ const ChatWindow = () => {
       },
     ];
     setMessages((messages) => {
-      const newMessageList = [...data, ...messages];
+      let newMessageList = [...data, ...messages];
+      newMessageList = newMessageList.splice(0, CHAT_MESSAGES_LIMIT);
       return newMessageList;
     });
   };
