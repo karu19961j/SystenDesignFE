@@ -9,7 +9,7 @@ import Accordion from "./components/Accordion";
 import Comments from "./components/comments/Comments";
 import ImageSlider from "./components/image-slider/ImageSlider";
 import Pagination from "./components/pagination/pagination";
-import Youtube from "./components/Youtube/Youtube";
+import LiveChat from "./components/live-chat/LiveChat";
 
 function App() {
   const [lang, setLang] = useState("en");
@@ -36,7 +36,7 @@ function App() {
           <a href="/comments">Comments</a>
           <a href="/image-slider">Image Slider</a>
           <a href="/pagination">Pagination</a>
-          <a href="/Youtube">Youtube</a>
+          <a href="/live-chat">LiveChat</a>
         </nav>
         <select value={lang} onChange={(e) => setLang(e.target.value)}>
           <option value="en">English</option>
@@ -57,7 +57,7 @@ function App() {
           <Route path="/comments" element={<Comments />} />
           <Route path="/image-slider" element={<ImageSlider />} />
           <Route path="/pagination" element={<Pagination />} />
-          <Route path="/youtube" element={<Youtube />} />
+          <Route path="/live-chat" element={<LiveChat />} />
         </Routes>
       </BrowserRouter>
     </div>
